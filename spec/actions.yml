@@ -1,0 +1,191 @@
+-
+  before_text: 1. Working
+  after_text: Office work is not for Valery
+  conds:
+    -
+      field: tire
+      operator: '<'
+      value: 10
+    -
+      field: mana
+      operator: '<'
+      value: 30
+  effects:
+    -
+      field: fun
+      operator: '-'
+      value: 5
+    -
+      field: mana
+      operator: '-'
+      value: 30
+    -
+      field: money
+      operator: '+'
+      value: 100
+    -
+      field: tire
+      operator: '+'
+      value: 70
+-
+  before_text: 2. See nature
+  after_text: Weird bear, weird owl
+  effects:
+    -
+      field: fun
+      operator: '+'
+      value: 1
+    -
+      field: mana
+      operator: '-'
+      value: 10
+    -
+      field: tire
+      operator: '+'
+      value: 10
+-
+  before_text: 3. Drink wine and watch TV series
+  after_text: Nice Netflix
+  effects:
+    -
+      field: fun
+      operator: '-'
+      value: 1
+    -
+      field: mana
+      operator: '+'
+      value: 30
+    -
+      field: tire
+      operator: '+'
+      value: 10
+    -
+      field: health
+      operator: '-'
+      value: 5
+    -
+      field: money
+      operator: '-'
+      value: 20
+-
+  before_text: 4. Go to pub
+  after_text: Why don't they pour it for snails
+  effects:
+    -
+      field: fun
+      operator: '+'
+      value: 1
+    -
+      field: mana
+      operator: '+'
+      value: 60
+    -
+      field: tire
+      operator: '+'
+      value: 40
+    -
+      field: health
+      operator: '-'
+      value: 10
+    -
+      field: money
+      operator: '-'
+      value: 100
+-
+  before_text: 5. Drink with marginals
+  after_text: I understood why..
+  effects:
+    -
+      field: fun
+      operator: '+'
+      value: 5
+    -
+      field: mana
+      operator: '+'
+      value: 90
+    -
+      field: tire
+      operator: '+'
+      value: 80
+    -
+      field: health
+      operator: '-'
+      value: 80
+    -
+      field: money
+      operator: '-'
+      value: 150
+-
+  before_text: 6. Sing in the subway
+  after_text: Low life
+  effects:
+    -
+      field: money
+      operator: '+'
+      value: 10
+      conds:
+        -
+          field: mana
+          operator: '>'
+          value: 40
+        -
+          field: mana
+          operator: '<'
+          value: 70
+      effects:
+        -
+          field: money
+          operator: '+'
+          value: 50
+    -
+      field: fun
+      operator: '+'
+      value: 1
+    -
+      field: mana
+      operator: '+'
+      value: 10
+    -
+      field: tire
+      operator: '+'
+      value: 20
+-
+  before_text: 7. Sleep
+  after_text: Was it just a dream?
+  effects:
+    -
+      field: fun
+      operator: '-'
+      value: 0
+      conds:
+        -
+          field: mana
+          operator: '>'
+          value: 70
+      effects:
+        -
+          field: fun
+          operator: '-'
+          value: 3
+    -
+      field: health
+      operator: '+'
+      value: 0
+      conds:
+        -
+          field: mana
+          operator: '<'
+          value: 30
+      effects:
+        -
+          field: health
+          operator: '+'
+          value: 90
+    -
+      field: mana
+      operator: '-'
+      value: 50
+    -
+      field: tire
+      operator: '-'
+      value: 70
